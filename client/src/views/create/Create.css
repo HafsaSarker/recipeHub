@@ -1,0 +1,11 @@
+.create-page {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+.create-post-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
