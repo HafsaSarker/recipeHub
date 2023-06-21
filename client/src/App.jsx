@@ -1,10 +1,16 @@
+import { Route, Routes } from "react-router-dom";
+import Layout from "./layouts/Layout";
 import './App.css'
 
 function App() {
 
   return (
     <div className="App">
-      recipeHub
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          
+        </Route>
+      </Routes>
     </div>
   )
 }

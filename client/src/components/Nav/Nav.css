@@ -1,0 +1,9 @@
+.nav {
+    background-color:#ea580c;
+    padding: 15px 40px;
+}
+.nav ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
