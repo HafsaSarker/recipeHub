@@ -2,10 +2,11 @@ const express = require('express')
 const app = express()
 const entries = require('./routes/entries')
 const connectDB = require('./db/connect')
+const cors = require('cors')
 require('dotenv').config()
 
-
 //middleware
+app.use(cors());
 app.use(express.json())
 
 //base route
