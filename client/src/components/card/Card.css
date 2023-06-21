@@ -1,0 +1,27 @@
+.recipe-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 1px #e1e6eb;
+    border-radius: 4px;
+    gap: 10px;
+    padding: 10px 0px;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
+
+.top span {
+    cursor: pointer;
+}
+
+.recipe-card img {
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
+}
+
