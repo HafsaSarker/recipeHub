@@ -1,9 +1,7 @@
 import Card from "../../components/card/Card"
 import './Home.css'
 
-export default function Home({posts}) {
-    console.log(posts.allEntries)
-
+export default function Home({posts}) { 
     return (
         <div className="home">
             <h2>All Recipes</h2>

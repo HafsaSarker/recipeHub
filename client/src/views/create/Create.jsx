@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import './Create.css'
+import axios from 'axios'
+import { path } from '../../api'
 
 export default function Create() {
     const [newPost, setNewPost] = useState({
@@ -17,9 +19,17 @@ export default function Create() {
         }))
     }
     
-    function createPost(e){
+    async function createPost(e){
         e.preventDefault()
-        console.log(newPost)
+        
+        try {
+            const res = await axios.post(`${path}/create`, newPost)
+
+            window.location ='/'
+            return res.data   
+        } catch (error) {
+            console.log(error)
+        }
     }
     return (
         <div className="create-page" onSubmit={createPost}>
