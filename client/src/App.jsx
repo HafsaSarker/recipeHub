@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import { path } from "./api";
 import axios from 'axios'
 import ViewPost from "./views/post/ViewPost";
+import EditPost from "./views/edit/EditPost";
 
 function App() {
   const [posts, setPosts] = useState([])
@@ -31,6 +32,7 @@ function App() {
           <Route index element={<Home posts={posts}/>}/>
           <Route path="/create" element={<Create />}/>
           <Route path="/posts/:id" element={<ViewPost />}/>
+          <Route path="/posts/edit/:id" element={<EditPost posts={posts}/>} />
         </Route>
       </Routes>
     </div>

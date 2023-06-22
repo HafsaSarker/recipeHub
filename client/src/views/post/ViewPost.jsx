@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom'
 import './ViewPost.css'
+import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { path } from '../../api'
@@ -29,12 +30,14 @@ export default function ViewPost(){
                 <div className="ViewPost">
                     <div className="top">
                         <h3>{viewPost.name}</h3>
-                        <span>
-                            <AiFillEdit/>
-                        </span>
+                        <Link to={`/posts/edit/${id}`}>
+                            <span>
+                                <AiFillEdit/>
+                            </span>
+                        </Link>
                     </div>
                     <img src={viewPost.imgUrl}/>
-                    <a href={viewPost.recipeLink}>
+                    <a href={viewPost.recipeLink} target='_blank'>
                         <button>View Recipe</button>
                     </a>
                 </div>

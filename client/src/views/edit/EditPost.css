@@ -1,14 +1,21 @@
-.create-page {
+.edit-page {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 15px;
     justify-content: center;
     padding: 15px;
-    gap: 15px;
 }
 
-.create-post-form {
+.edit-post-form {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+.btncont{
+    margin-top: 10px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
 }

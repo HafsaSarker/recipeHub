@@ -8,9 +8,13 @@ export default function Card({id, name, imgUrl, recipeLink}) {
         <div className="recipe-card">
             <div className="top">
                 <h3>{name}</h3>
-                <span>
-                    <AiFillEdit/>
-                </span>
+                
+                <Link to={`/posts/edit/${id}`}>
+                    <span>
+                        <AiFillEdit/>
+                    </span>
+                </Link>
+                
             </div>
 
             <Link to={`/posts/${id}`}>

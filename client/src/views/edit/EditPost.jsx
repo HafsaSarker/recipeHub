@@ -1,45 +1,57 @@
 import { useState } from 'react'
-import './Create.css'
+import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import { path } from '../../api'
+import './EditPost.css'
 
-export default function Create() {
-    const [newPost, setNewPost] = useState({
-        name: '',
-        imgUrl: '',
-        recipeLink: ''
-    })
+export default function EditPost({posts}){
+    const {id} = useParams()
+
+    const filterPost = posts.filter((item) => item._id == id)[0]
+
+    const [editPost, setEditPost] = useState(filterPost)
 
     function handleChange(e){
         const {name, value} = e.target 
 
-        setNewPost((prev) => ({
+        setEditPost((prev) => ({
             ...prev,
             [name]: value
         }))
     }
     
-    async function createPost(e){
+    async function updatePost(e){
         e.preventDefault()
         
         try {
-            const res = await axios.post(`${path}/create`, newPost)
+            const {data} = await axios.patch(`${path}/${id}`, editPost)
 
             window.location ='/'
-            return res.data   
+            return data   
         } catch (error) {
             console.log(error)
         }
     }
+    
+    async function deletPost(){
+        try {
+            await axios.delete(`${path}/${id}`)
+            window.location = '/'
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
     return (
-        <div className="create-page" onSubmit={createPost}>
-            <h2>Create a post</h2>
-            <form className='create-post-form'>
+        <div className="edit-page">
+            <h2>Edit post</h2>
+            <form className='edit-post-form' onSubmit={updatePost}>
                 <label>
                     recipe title:
                     <input 
                         type="text"
                         name='name'
+                        value={editPost.name}
                         required
                         onChange={handleChange}
                     />
@@ -49,6 +61,7 @@ export default function Create() {
                     <input 
                         type="text"
                         name='imgUrl'
+                        value={editPost.imgUrl}
                         required
                         onChange={handleChange}
                     />
@@ -58,11 +71,16 @@ export default function Create() {
                     <input 
                         type="text"
                         name='recipeLink'
+                        value={editPost.recipeLink}
                         required
                         onChange={handleChange}
                     />
                 </label>
-                <button>Submit</button>
+                <div className="btncont">
+                    <button type='submit'>Update</button>
+                    <button type='button' onClick={deletPost}>Delete</button>
+                </div>
+                
             </form>
         </div>
     )
