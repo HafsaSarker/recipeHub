@@ -11,6 +11,7 @@ export default function Home({posts}) {
                     posts.map((item, index) => 
                         <Card 
                             key={index}
+                            id={item._id}
                             name={item.name}
                             imgUrl={item.imgUrl}
                             recipeLink={item.recipeLink}

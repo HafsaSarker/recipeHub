@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Router, Routes } from "react-router-dom";
 import Layout from "./layouts/Layout";
 import Home from "./views/home/Home";
 import './App.css'
@@ -6,6 +6,7 @@ import Create from "./views/create/Create";
 import { useEffect, useState } from "react";
 import { path } from "./api";
 import axios from 'axios'
+import ViewPost from "./views/post/ViewPost";
 
 function App() {
   const [posts, setPosts] = useState([])
@@ -29,6 +30,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home posts={posts}/>}/>
           <Route path="/create" element={<Create />}/>
+          <Route path="/posts/:id" element={<ViewPost />}/>
         </Route>
       </Routes>
     </div>

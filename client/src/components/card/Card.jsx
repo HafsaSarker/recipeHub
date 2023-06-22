@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
 import { AiFillEdit } from 'react-icons/ai';
 import './Card.css'
 
-export default function Card({name, imgUrl, recipeLink}) {
+export default function Card({id, name, imgUrl, recipeLink}) {
 
     return (
         <div className="recipe-card">
@@ -11,8 +12,11 @@ export default function Card({name, imgUrl, recipeLink}) {
                     <AiFillEdit/>
                 </span>
             </div>
-            
-            <img src={imgUrl} />
+
+            <Link to={`/posts/${id}`}>
+                <img src={imgUrl} />
+            </Link>
+
             <a href={recipeLink} target='_blank'>
                 <button>
                     Get Recipe
