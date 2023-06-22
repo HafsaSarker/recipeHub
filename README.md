@@ -1,4 +1,3 @@
 ### Share your favorite recipes 
     My first MERN stack application :)
-
-    ![Alt text](client/public/home.png)
+    <img src='.\client/public/home.png' width='400' />
