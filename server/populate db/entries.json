@@ -1,0 +1,138 @@
+[
+    {
+       "name": "Chicken Biriyani",
+       "imgUrl": "https://norecipes.com/wp-content/uploads/2017/05/chicken-biryani-005-1025x1536.jpg",
+       "recipeLink": "https://norecipes.com/chicken-biryani-recipe/", 
+        "cuisine": "indian",
+        "TotTime": "2h 30min",
+        "servings": 5,
+        "rating": 4.5
+    },
+    {
+        "name": "Gyoza",
+        "imgUrl": "https://cdn.momsdish.com/wp-content/uploads/2020/09/Gyoza-Recipe-020-600x900.jpg",
+        "recipeLink": "https://momsdish.com/gyoza",
+        "cuisine": "japanese",
+        "TotTime": "30min",
+        "servings": 52,
+        "rating": 4.84
+    },
+    {
+        "name": "TTEOKBOKKI",
+        "imgUrl": "https://mykoreankitchen.com/wp-content/uploads/2017/11/1.-Tteokbokki.jpg",
+        "recipeLink": "https://mykoreankitchen.com/tteokbokki-spicy-rice-cakes/",
+        "cuisine": "korean",
+        "TotTime": "20min",
+        "servings": 2,
+        "rating": 5
+    },
+    {
+        "name": "FRIED RICE",
+        "imgUrl": "https://www.gimmesomeoven.com/wp-content/uploads/2017/07/How-To-Make-Fried-Rice-Recipe-2-1-1100x1650.jpg",
+        "recipeLink": "https://www.gimmesomeoven.com/fried-rice-recipe/",
+        "cuisine": "chinese",
+        "TotTime": "15min",
+        "servings": 6,
+        "rating": 4.9
+    },
+    {
+        "name": "Shoyu Ramen",
+        "imgUrl": "https://www.marionskitchen.com/wp-content/uploads/2019/05/Shoyu-Ramen-2.jpg",
+        "recipeLink": "https://www.marionskitchen.com/shoyu-ramen/",
+        "cuisine": "japanese",
+        "TotTime": "4h 30min",
+        "servings": 6,
+        "rating": 5
+    },
+    {
+        "name": "Butter Chicken",
+        "imgUrl": "https://cdn.momsdish.com/wp-content/uploads/2020/09/Gyoza-Recipe-020-600x900.jpg",
+        "recipeLink": "https://norecipes.com/butter-chicken-recipe/",
+        "cuisine": "indian",
+        "TotTime": "5h 15min",
+        "servings": 2,
+        "rating": 4.67
+    },
+    {
+        "name": "Asari Miso",
+        "imgUrl": "https://norecipes.com/wp-content/uploads/2011/09/asari-miso-soup-recipe.1024x1024.jpg",
+        "recipeLink": "https://norecipes.com/asari-miso-soup-recipe/",
+        "cuisine": "japanese",
+        "TotTime": "7min",
+        "servings": 2,
+        "rating": 5
+    },
+    {
+        "name": "Chicken Teriyaki",
+        "imgUrl": "https://norecipes.com/wp-content/uploads/2018/08/teriyaki-chicken-recipe_010.jpg",
+        "recipeLink": "https://norecipes.com/best-chicken-teriyaki-recipe/",
+        "cuisine": "japanese",
+        "TotTime": "8min",
+        "servings": 4,
+        "rating": 4.37
+    },
+    {
+        "name": "Kung Pao",
+        "imgUrl": "https://cdn.momsdish.com/wp-content/uploads/2020/09/Gyoza-Recipe-020-600x900.jpg",
+        "recipeLink": "https://norecipes.com/kung-pao-chicken/",
+        "cuisine": "chinese",
+        "TotTime": "22min",
+        "servings": 2,
+        "rating": 3.34
+    },
+    {
+        "name": "Korean Beef",
+        "imgUrl": "https://cdn.momsdish.com/wp-content/uploads/2019/02/30-Minute-Korean-Beef-Stir-Fry-07-683x1024.jpg",
+        "recipeLink": "https://momsdish.com/30-minute-korean-beef-stir-fry",
+        "cuisine": "korean",
+        "TotTime": "30min",
+        "servings": 8,
+        "rating": 4.8
+    },
+    {
+        "name": "Hunan Chicken",
+        "imgUrl": "https://cdn.momsdish.com/wp-content/uploads/2023/05/Hunan-Chicken-06-600x900.jpg",
+        "recipeLink": "https://momsdish.com/hunan-chicken",
+        "cuisine": "chinese",
+        "TotTime": "40min",
+        "servings": 4,
+        "rating": 5
+    },
+    {
+        "name": "Pad Krapow",
+        "imgUrl": "https://gypsyplate.com/wp-content/uploads/2021/03/pad-krapow-gai_01-600x900.jpg",
+        "recipeLink": "https://gypsyplate.com/thai-basil-chicken/",
+        "cuisine": "thai",
+        "TotTime": "20min",
+        "servings": 4,
+        "rating": 4.6
+    },
+    {
+        "name": "ZUCCHINI STEW",
+        "imgUrl": "https://www.unicornsinthekitchen.com/wp-content/uploads/2021/09/Turkish-Zucchini-Stew-1.1200px.jpg",
+        "recipeLink": "https://www.unicornsinthekitchen.com/turkish-zucchini-stew-recipe/",
+        "cuisine": "turkish",
+        "TotTime": "35min",
+        "servings": 4,
+        "rating": 5
+    },
+    {
+        "name": "Chicken Buddha",
+        "imgUrl": "https://i.pinimg.com/564x/34/f1/ae/34f1ae9c252d98f54813ddf01ab7416d.jpg",
+        "recipeLink": "https://www.pinterest.com/pin/792422496940929954/",
+        "cuisine": "thai",
+        "TotTime": "50min",
+        "servings": 4,
+        "rating": 5
+    },
+    {
+        "name": "Pad Thai",
+        "imgUrl": "https://i.pinimg.com/564x/6f/43/1d/6f431dcd1a8c8801af6ba6eef9ed0872.jpg",
+        "recipeLink": "https://www.pinterest.com/pin/792422496940929830/",
+        "cuisine": "thai",
+        "TotTime": "30min",
+        "servings": 4,
+        "rating": 5
+    }
+
+]
