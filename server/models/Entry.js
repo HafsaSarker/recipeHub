@@ -15,6 +15,27 @@ const EntrySchema = new mongoose.Schema ({
         type: String,
         required: [true, 'Please provide recipe link'],
         trim: true,
+    },
+    cuisine: {
+        type: String,
+        enum: {
+            values: ['indian', 'italien', 'thai', 'chinese', 'japanese', 'korean', 'french', 'turkish'],
+            message: '{VALUE} is not supported'
+        },
+        required: [true, 'Please provide country'],
+        trim: true,
+    },
+    TotTime: {
+        type: String,
+        required: [true, 'Please provide the total time needed'],
+        trim: true,
+    },
+    servings: {
+        type: Number
+    },
+    rating: {
+        type: Number,
+        default: 4.5
     }
 })
 
