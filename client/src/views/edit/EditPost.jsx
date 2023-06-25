@@ -76,6 +76,48 @@ export default function EditPost({posts}){
                         onChange={handleChange}
                     />
                 </label>
+                <label>
+                    cuisine:
+                    <input 
+                        type="text"
+                        name='cuisine'
+                        value={editPost.cuisine}
+                        required
+                        onChange={handleChange}
+                    />
+                </label>
+                <label>
+                    total time:
+                    <input 
+                        type="text"
+                        name='TotTime'
+                        placeholder='eg, 2h 40min'
+                        value={editPost.TotTime}
+                        required
+                        onChange={handleChange}
+                    />
+                </label>
+                <label>
+                    servings:
+                    <input 
+                        type="float"
+                        name='servings'
+                        value={editPost.servings}
+                        required
+                        onChange={handleChange}
+                    />
+                </label>
+                <label>
+                    rating:
+                    <input 
+                        type="float"
+                        name='rating'
+                        value={editPost.rating}
+                        required
+                        onChange={handleChange}
+                    />
+                </label>
+
                 <div className="btncont">
                     <button type='submit'>Update</button>
                     <button type='button' onClick={deletPost}>Delete</button>

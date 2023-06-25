@@ -7,7 +7,11 @@ export default function Create() {
     const [newPost, setNewPost] = useState({
         name: '',
         imgUrl: '',
-        recipeLink: ''
+        recipeLink: '',
+        cuisine: '',
+        TotTime: '',
+        servings: null,
+        rating: null
     })
 
     function handleChange(e){
@@ -58,6 +62,43 @@ export default function Create() {
                     <input 
                         type="text"
                         name='recipeLink'
+                        required
+                        onChange={handleChange}
+                    />
+                </label>
+                <label>
+                    cuisine:
+                    <input 
+                        type="text"
+                        name='cuisine'
+                        required
+                        onChange={handleChange}
+                    />
+                </label>
+                <label>
+                    total time:
+                    <input 
+                        type="text"
+                        name='TotTime'
+                        placeholder='eg, 2h 40min'
+                        required
+                        onChange={handleChange}
+                    />
+                </label>
+                <label>
+                    servings:
+                    <input 
+                        type="float"
+                        name='servings'
+                        required
+                        onChange={handleChange}
+                    />
+                </label>
+                <label>
+                    rating:
+                    <input 
+                        type="float"
+                        name='rating'
                         required
                         onChange={handleChange}
                     />
