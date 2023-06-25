@@ -65,6 +65,11 @@ input:focus {
   outline: none;
 }
 
+.highlight{
+  background-color: #d86e34;
+  padding: 0px 3px;
+  border-radius: 8px;
+}
 @media (prefers-color-scheme: dark) {
   :root {
     color: #213547;

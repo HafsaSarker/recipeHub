@@ -4,8 +4,17 @@
     align-items: center;
     border: solid 1px #e1e6eb;
     border-radius: 4px;
-    gap: 10px;
     padding: 10px 0px;
+}
+
+.recipe-info {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.recipe-info p {
+    font-size: 13px;
 }
 
 .top {
@@ -20,8 +29,12 @@
 }
 
 .recipe-card img {
+    margin: 15px 0px 10px 0px;
     width: 250px;
     height: 200px;
     object-fit: cover;
 }
 
+.recipe-card button {
+    margin-bottom: 8px;
+}

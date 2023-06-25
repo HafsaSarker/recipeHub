@@ -15,6 +15,8 @@ export default function Home({posts}) {
                             name={item.name}
                             imgUrl={item.imgUrl}
                             recipeLink={item.recipeLink}
+                            cuisine={item.cuisine}
+                            TotTime={item.TotTime}
                         />
                     )
                 }

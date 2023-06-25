@@ -20,4 +20,4 @@ const populateDB = async() => {
     }
 }
 
-populateDB()
+//populateDB()
