@@ -41,8 +41,14 @@ export default function ViewPost(){
                         <p className="highlight">{viewPost.cuisine}</p>
                         <p>Time: {viewPost.TotTime}</p>
                     </div>
-                    
+
                     <img src={viewPost.imgUrl}/>
+
+                    <div className="recipe-info">
+                        <p>Makes {viewPost.servings} servings</p>
+                        <p>Rated: {viewPost.rating}/5</p>
+                    </div>
+
                     <a href={viewPost.recipeLink} target='_blank'>
                         <button>View Recipe</button>
                     </a>
