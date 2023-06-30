@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const entries = require('./routes/entries')
+const user = require('./routes/user')
 const connectDB = require('./db/connect')
 const cors = require('cors')
 require('dotenv').config()
@@ -11,6 +12,7 @@ app.use(express.json())
 
 //base route
 app.use('/recipeHub/entries', entries)
+app.use('/recipeHub/users', user)
 
 const port = 3000
 

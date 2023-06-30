@@ -1,12 +1,12 @@
 const Entry = require('../models/Entry')
-const asyncWrapper = require('../middleware/async')
+const ash = require('express-async-handler')
 
-const getAllEntries = asyncWrapper( async(req, res) => {
+const getAllEntries = ash( async(req, res) => {
     const allEntries = await Entry.find({})
     res.status(200).json({ allEntries })
 })
 
-const getEntry = asyncWrapper( async(req, res) => {
+const getEntry = ash( async(req, res) => {
     const {id} = req.params
     const entry = await Entry.findOne({_id:id})
 
@@ -17,12 +17,12 @@ const getEntry = asyncWrapper( async(req, res) => {
     res.status(200).json({ entry })
 })
 
-const createEntry = asyncWrapper ( async(req, res) => {
+const createEntry = ash ( async(req, res) => {
     const entry = await Entry.create(req.body)
     res.status(201).json({ entry })
 })
 
-const updateEntry = asyncWrapper( async(req, res) => {
+const updateEntry = ash( async(req, res) => {
     const {id} = req.params
     const entry = await Entry.findByIdAndUpdate({_id: id}, req.body, {
         new: true,
@@ -37,7 +37,7 @@ const updateEntry = asyncWrapper( async(req, res) => {
 
 })
 
-const deleteEntry = asyncWrapper( async(req, res) => {
+const deleteEntry = ash( async(req, res) => {
     const {id} = req.params
     const entry = await Entry.findOneAndDelete({_id:id})
 
