@@ -1,6 +1,11 @@
 const mongoose = require('mongoose')
 
 const EntrySchema = new mongoose.Schema ({
+    user: {
+        type: mongoose.Schema.Types.ObjectID,
+        required: true,
+        ref: 'User'
+    },
     name: {
         type: String,
         required: [true, 'Please provide recipe name'],
