@@ -63,11 +63,30 @@ const updateEntry = ash( async(req, res) => {
 
 const deleteEntry = ash( async(req, res) => {
     const {id} = req.params
-    const entry = await Entry.findOneAndDelete({_id:id})
+
+    const entry = await Entry.findById(id)
 
     if(!entry){
-        return res.status(404).json({message: `No entry with id: ${id}`})
+        res.status(404)
+        throw new Error('Goal not found')
     }
+
+    const user = await User.findById(req.user.id)
+
+    //validate user
+    if(!user){
+        res.status(401)
+        throw new Error('User not found')
+    }
+
+    //check if goal user is the current user 
+    if(entry.user.toString() !== req.user.id){
+        res.status(401)
+        throw new Error('User not authorized')
+    }
+    
+
+    await Entry.findOneAndDelete({_id:id})
 
     res.status(200).json({ success: 'true' })
 })
