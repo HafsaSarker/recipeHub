@@ -10,10 +10,10 @@ const {
 const protect = require('../middleware/auth')
 
 //get all entries
-router.route('/').get(protect, getAllEntries)
+router.route('/').get(getAllEntries)
 
 //get a single entry
-router.route('/:id').get(protect, getEntry)
+router.route('/:id').get(getEntry)
 
 //create an entry
 router.route('/create').post(protect, createEntry)
