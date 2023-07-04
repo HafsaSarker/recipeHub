@@ -5,5 +5,10 @@
 .nav ul {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     gap: 20px;
+}
+.logout-btn {
+    padding: 0;
+    background-color: transparent; 
 }
