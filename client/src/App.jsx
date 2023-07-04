@@ -8,6 +8,9 @@ import { path } from "./api";
 import axios from 'axios'
 import ViewPost from "./views/post/ViewPost";
 import EditPost from "./views/edit/EditPost";
+import Landing from "./views/landing/Landing";
+import Login from "./views/login/Login";
+import Register from "./views/register/Register";
 
 function App() {
   const [posts, setPosts] = useState([])
@@ -29,7 +32,10 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Home posts={posts}/>}/>
+          <Route index element={<Landing/>}/>
+          <Route path="/login" element={<Login />}/>
+          <Route path="/register" element={<Register />}/>
+          <Route path='/home' element={<Home posts={posts}/>}/>
           <Route path="/create" element={<Create />}/>
           <Route path="/posts/:id" element={<ViewPost />}/>
           <Route path="/posts/edit/:id" element={<EditPost posts={posts}/>} />
