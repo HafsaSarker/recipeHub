@@ -1,4 +1,9 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
+import { toast } from 'react-toastify'
+import {register, reset} from '../../features/auth/authSlice'
+import Spinner from '../../components/spinner/Spinner'
 import './Register.css'
 
 function Register() {
@@ -8,7 +13,28 @@ function Register() {
         password: '',
         confirmPass: ''
     })
-    function handleChange(e){
+
+    const {name, email, password, confirmPass} = formData
+
+    const navigate = useNavigate()
+    const dispatch = useDispatch()
+
+    const {user, isLoading, isError, isSuccess, message} = useSelector((state) => state.auth)
+
+    //watch for changes in user, isError, etc...
+    useEffect(() => {
+        if(isError){
+            toast.error(message)
+        }
+
+        if(isSuccess || user){
+            navigate('/home')
+        }
+        //if everything is ok, reset
+        dispatch(reset())
+    }, [user, isError, isSuccess, message, navigate, dispatch])
+
+    async function handleChange(e){
         const {name, value} = e.target 
 
         setFormData((prev) => ({
@@ -20,8 +46,25 @@ function Register() {
     function createUser(e){
         e.preventDefault()
 
-        console.log(formData);
+        if(password != confirmPass) {
+            toast.error('Passwords do not match')
+        } else {
+            const userData = {
+                name,
+                email,
+                password
+            }
+            
+            //dispatch user data, 
+            //calls the register function from authService
+            dispatch(register(userData))
+        }
     }
+
+    if(isLoading) {
+        return <Spinner />
+    }
+    
   return (
     <div className="register">
         <h2>Create a new account</h2>
@@ -45,7 +88,7 @@ function Register() {
                 />
             </label>
             <label>
-                password:
+                password: 
                 <input 
                     type="password"
                     name='password'

@@ -11,6 +11,8 @@ import EditPost from "./views/edit/EditPost";
 import Landing from "./views/landing/Landing";
 import Login from "./views/login/Login";
 import Register from "./views/register/Register";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css'
 
 function App() {
   const [posts, setPosts] = useState([])
@@ -41,6 +43,7 @@ function App() {
           <Route path="/posts/edit/:id" element={<EditPost posts={posts}/>} />
         </Route>
       </Routes>
+      <ToastContainer />
     </div>
   )
 }
