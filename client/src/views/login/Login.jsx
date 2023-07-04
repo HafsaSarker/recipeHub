@@ -1,11 +1,37 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './Login.css'
+import { useNavigate } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+import { toast } from 'react-toastify'
+import { logInUser, reset } from '../../features/auth/authSlice'
+import Spinner from '../../components/spinner/Spinner'
 
 function Login() {
     const [formData, setFormData] = useState({
         email: '',
         password: ''
     })
+    
+    const {email, password} = formData
+
+    const navigate = useNavigate()
+    const dispatch = useDispatch()
+
+    const { user, isLoading, isError, isSuccess, message } = useSelector((state) => state.auth)
+
+    useEffect(() => {
+        if(isError){
+            toast.error(message)
+        }
+
+        if(isSuccess || user) {
+            navigate('/home')
+        }
+
+        dispatch(reset())
+
+    }, [user, isError, isSuccess, message, navigate, dispatch])
+    
     async function handleChange(e){
         const {name, value} = e.target 
 
@@ -18,7 +44,16 @@ function Login() {
     function loginUser(e){
         e.preventDefault()
 
-        console.log(formData);
+        const userData = {
+            email,
+            password
+        }
+
+        dispatch(logInUser(userData))
+    }
+
+    if(isLoading) {
+        return <Spinner />
     }
   return (
     <div className="login">
